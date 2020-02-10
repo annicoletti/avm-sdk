@@ -1,0 +1,34 @@
+package br.com.cpqd.avm.sdk.v1.model.to;
+
+import java.io.Serializable;
+
+public class ResponseTO implements Serializable {
+
+	private static final long serialVersionUID = -2875047698537499968L;
+
+	protected String requestId;
+
+	protected Boolean status;
+
+	public String getRequestId() {
+		return requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "ResponseTO [requestId=" + requestId + ", status=" + status + "]";
+	}
+
+}
