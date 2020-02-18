@@ -4,7 +4,7 @@ public interface SdkConstants {
 
 	interface DataModel {
 
-		public static final String LABEL = "datamodel";
+		public static final String DATA_MODEL = "datamodel";
 		public static final String MENU = "MENU";
 		public static final String CONTENT = "CONTENT";
 		public static final String COLLECT = "COLLECT";

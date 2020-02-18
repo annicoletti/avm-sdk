@@ -106,10 +106,10 @@ public final class BuilderResponse {
 			if (!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.EVENT_NAME)) {
 				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_EVENT_NAME);
 			}
-			if(this.response.containsKey(SdkConstants.DataModel.LABEL)) {
-				DataModel model = (DataModel) this.response.get(SdkConstants.DataModel.LABEL);
+			if(this.response.containsKey(SdkConstants.DataModel.DATA_MODEL)) {
+				DataModel model = (DataModel) this.response.get(SdkConstants.DataModel.DATA_MODEL);
 				this.response.put(model.getDataModelKey(), model.getDataModelValue());	
-				this.response.put("data", model);				
+				this.response.put("datamodel", model);				
 			}
 				
 			response = new ResponseSuccessTO(requestId);

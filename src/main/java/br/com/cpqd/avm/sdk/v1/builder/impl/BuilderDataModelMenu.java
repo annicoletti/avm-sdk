@@ -12,7 +12,7 @@ import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 public class BuilderDataModelMenu {
 
 	private Menu menu = new Menu();
-
+	
 	private List<Content> listContent;
 
 	public BuilderDataModelMenu addTitle(String title) {
