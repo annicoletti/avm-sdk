@@ -3,7 +3,6 @@ package br.com.cpqd.avm.sdk.v1.model.to;
 import java.util.List;
 
 import br.com.cpqd.avm.sdk.v1.builder.api.DataModel;
-import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 
 public class Menu implements DataModel {
 
@@ -14,11 +13,6 @@ public class Menu implements DataModel {
 	private String title;
 
 	private String info;
-	
-	@Override
-	public String getDataModelValue() {
-		return SdkConstants.DataModel.MENU;
-	}
 
 	public List<Content> getContent() {
 		return content;
@@ -56,6 +50,5 @@ public class Menu implements DataModel {
 	public String toString() {
 		return "MenuTO [content=" + content + ", imageUrl=" + imageUrl + ", title=" + title + ", info=" + info + "]";
 	}
-	
 
 }

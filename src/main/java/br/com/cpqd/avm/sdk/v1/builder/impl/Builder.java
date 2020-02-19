@@ -16,7 +16,9 @@ public final class Builder {
 	
 
 	public static final BuilderRequest REQUEST = new BuilderRequest();
-	
-	public static final BuilderResponse RESPONSE = new BuilderResponse();
 
+	public static final BuilderResponse RESPONSE = new BuilderResponse();
+	
+	public static final BuilderResponseSuccess RESPONSE_SUCESS = new BuilderResponseSuccess();
+	
 }

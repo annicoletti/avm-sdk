@@ -3,11 +3,10 @@ package br.com.cpqd.avm.sdk.v1.builder.impl;
 import java.util.HashMap;
 import java.util.Map;
 
-import br.com.cpqd.avm.sdk.v1.builder.api.DataModel;
 import br.com.cpqd.avm.sdk.v1.exception.SdkExceptions;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseTO;
 import br.com.cpqd.avm.sdk.v1.model.to.ResponseErrorTO;
 import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseTO;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 
@@ -106,12 +105,11 @@ public final class BuilderResponse {
 			if (!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.EVENT_NAME)) {
 				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_EVENT_NAME);
 			}
-			if(this.response.containsKey(SdkConstants.DataModel.DATA_MODEL)) {
-				DataModel model = (DataModel) this.response.get(SdkConstants.DataModel.DATA_MODEL);
-				this.response.put(model.getDataModelKey(), model.getDataModelValue());	
-				this.response.put("datamodel", model);				
-			}
-				
+			
+			if(!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.TYPE)) {
+				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_TYPE);		
+			} 
+			
 			response = new ResponseSuccessTO(requestId);
 			((ResponseSuccessTO) response).setResponse(this.response);
 			((ResponseSuccessTO) response).setStatus(status);

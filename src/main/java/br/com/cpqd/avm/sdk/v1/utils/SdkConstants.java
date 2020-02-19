@@ -42,7 +42,9 @@ public interface SdkConstants {
 		public static final String MESSAGE = "message";
 
 		interface Mandatory {
+			public static final String DATA_MODEL = "datamodel";
 			public static final String EVENT_NAME = "eventName";
+			public static final String TYPE = "type";
 			public static final String STATUS = "status";
 			public static final String ERROR_CODE = "errorCode";
 			public static final String ERROR_MESSAGE = "errorMessage";

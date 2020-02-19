@@ -3,7 +3,6 @@ package br.com.cpqd.avm.sdk.v1.model.to;
 import java.util.List;
 
 import br.com.cpqd.avm.sdk.v1.builder.api.DataModel;
-import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 
 public class Choices implements DataModel {
 
@@ -22,11 +21,6 @@ public class Choices implements DataModel {
 	private String url;
 
 	private Boolean quick_reply;
-	
-	@Override
-	public String getDataModelValue() {
-		return SdkConstants.DataModel.CHOICES;
-	}
 
 	public List<Voice> getVoice() {
 		return voice;
