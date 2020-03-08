@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.cpqd.avm</groupId>
 	<artifactId>sdk</artifactId>
-	<version>0.0.7</version>
+	<version>0.0.9</version>
 	<packaging>jar</packaging>
 	<name>avmsdk</name>
 	<description>SDK para Assistente Virtual Multicanal - CPqD</description>

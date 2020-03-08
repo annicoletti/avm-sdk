@@ -1,10 +1,13 @@
+/home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/enums/EnumResponseSuccess.java
+/home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/BuilderResponseError.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/model/to/Menu.java
+/home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/enums/EnumResponseError.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/model/to/ResponseSuccessTO.java
-/home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/Builder.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/model/to/Voice.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/BuilderDataModelVoice.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/model/to/ResponseErrorTO.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/BuilderDataModelContent.java
+/home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/BuilderResponseSuccess.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/api/DataModel.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/service/impl/BuilderServiceBean.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/exception/SdkExceptions.java
@@ -16,10 +19,12 @@
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/service/impl/IntegrationAvm.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/api/AvmIntegration.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/BuilderResponse.java
+/home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/ResponseBuilder.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/service/api/BuilderService.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/utils/SdkConstants.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/model/to/Content.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/model/to/ShortText.java
+/home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/enums/EnumType.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/BuilderDataModelShortText.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/BuilderDataModelMenu.java
 /home/nicoletti/cpqd/avm-sdk/avm-sdk/src/main/java/br/com/cpqd/avm/sdk/v1/builder/impl/BuilderDataModelChoices.java

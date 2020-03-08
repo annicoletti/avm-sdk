@@ -22,6 +22,8 @@ public class Sample {
 				System.out.println("não é json");
 			}
 		}
+		
+		sc.close();
 
 	}
 }

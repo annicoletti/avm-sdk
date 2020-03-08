@@ -1,6 +1,6 @@
 package br.com.cpqd.avm.sdk.v1.builder.impl;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import br.com.cpqd.avm.sdk.v1.exception.SdkExceptions;
@@ -16,7 +16,7 @@ public final class BuilderResponse {
 
 	private Boolean status;
 
-	private Map<String, Object> response;
+	private Map<String, Object> response = new LinkedHashMap<String, Object>();
 
 	private String code;
 
@@ -33,17 +33,11 @@ public final class BuilderResponse {
 	}
 
 	public BuilderResponse addResponse(Map<String, Object> response) {
-		if (this.response == null) {
-			this.response = new HashMap<String, Object>();
-		}
 		this.response.putAll(response);
 		return this;
 	}
 
 	public BuilderResponse addResponse(String key, Object value) {
-		if (this.response == null) {
-			this.response = new HashMap<String, Object>();
-		}
 		this.response.put(key, value);
 		return this;
 	}
@@ -99,17 +93,17 @@ public final class BuilderResponse {
 							SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_ERROR_MESSAGE_NOT_NECESSARY);
 				}
 			}
-			if (this.response == null || this.response.size() <= 0) {
+			if (this.response == null || this.response.isEmpty()) {
 				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE);
 			}
 			if (!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.EVENT_NAME)) {
 				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_EVENT_NAME);
 			}
-			
-			if(!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.TYPE)) {
-				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_TYPE);		
-			} 
-			
+
+			if (!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.TYPE)) {
+				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_TYPE);
+			}
+
 			response = new ResponseSuccessTO(requestId);
 			((ResponseSuccessTO) response).setResponse(this.response);
 			((ResponseSuccessTO) response).setStatus(status);

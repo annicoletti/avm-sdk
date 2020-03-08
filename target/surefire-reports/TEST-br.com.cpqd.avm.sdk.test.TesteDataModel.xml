@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.054" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.054" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/nicoletti/cpqd/avm-sdk/avm-sdk/target/surefire/surefirebooter9191461069356138859.jar /home/nicoletti/cpqd/avm-sdk/avm-sdk/target/surefire 2020-02-18T13-35-04_824-jvmRun1 surefire3246173960592125123tmp surefire_04432598385245383716tmp"/>
+    <property name="sun.java.command" value="/home/nicoletti/cpqd/avm-sdk/avm-sdk/target/surefire/surefirebooter1968558665001803792.jar /home/nicoletti/cpqd/avm-sdk/avm-sdk/target/surefire 2020-02-27T22-53-51_652-jvmRun1 surefire16515564250173471066tmp surefire_010412315368861013213tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/nicoletti/cpqd/avm-sdk/avm-sdk/target/test-classes:/home/nicoletti/cpqd/avm-sdk/avm-sdk/target/classes:/home/nicoletti/.m2/repository/org/json/json/20190722/json-20190722.jar:/home/nicoletti/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.2/jackson-databind-2.10.2.jar:/home/nicoletti/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.2/jackson-annotations-2.10.2.jar:/home/nicoletti/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.2/jackson-core-2.10.2.jar:/home/nicoletti/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/nicoletti/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/nicoletti/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/nicoletti/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/nicoletti/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/nicoletti/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,12 +32,12 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/nicoletti/cpqd/avm-sdk/avm-sdk/target/surefire/surefirebooter9191461069356138859.jar"/>
+    <property name="surefire.real.class.path" value="/home/nicoletti/cpqd/avm-sdk/avm-sdk/target/surefire/surefirebooter1968558665001803792.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.6+10-post-Ubuntu-1ubuntu119.10.1"/>
     <property name="user.name" value="nicoletti"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="5.3.0-29-generic"/>
+    <property name="os.version" value="5.3.0-40-generic"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
@@ -57,14 +57,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="dataModelShortText" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.024"/>
-  <testcase name="responseSuccessTO" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.007"/>
+  <testcase name="dataModelShortText" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.018"/>
+  <testcase name="responseSuccessTO" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.012"/>
   <testcase name="responseErrorTO" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.001"/>
-  <testcase name="dataModelChoices" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.001"/>
-  <testcase name="dataModelCollect" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.001"/>
+  <testcase name="dataModelChoices" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.003"/>
+  <testcase name="dataModelCollect" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.003"/>
   <testcase name="dataModelContent" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.001"/>
   <testcase name="dataModelMenu" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.001"/>
   <testcase name="requestTO" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.001"/>
-  <testcase name="responseSuccessTOwithResponseFalse" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.001"/>
   <testcase name="dataModelVoice" classname="br.com.cpqd.avm.sdk.test.TesteDataModel" time="0.001"/>
 </testsuite>
