@@ -31,6 +31,7 @@ public interface SdkConstants {
 		public static final String PORTFOLIO = "portfolio";
 		public static final String TOKEN = "token";
 		public static final String ACTION = "action";
+		public static final String PARAMETERS = "params";
 	}
 
 	interface ResponseFields {

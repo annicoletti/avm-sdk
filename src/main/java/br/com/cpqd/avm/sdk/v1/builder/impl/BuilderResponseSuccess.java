@@ -8,20 +8,13 @@ import br.com.cpqd.avm.sdk.v1.enums.EnumResponseError;
 import br.com.cpqd.avm.sdk.v1.enums.EnumResponseSuccess;
 import br.com.cpqd.avm.sdk.v1.enums.EnumType;
 import br.com.cpqd.avm.sdk.v1.exception.SdkExceptions;
-import br.com.cpqd.avm.sdk.v1.model.to.RequestTO;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessTO;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseTO;
+import br.com.cpqd.avm.sdk.v1.model.to.RequestAvmTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseAvmTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessAvmTO;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 
 public final class BuilderResponseSuccess {
-	/*
-	 * public static final String ERROR_CODE = "errorCode";
-	 * 
-	 * public static final String STATUS = "status";
-	 * 
-	 * public static final String ERROR_MESSAGE = "errorMessage";
-	 */
 
 	private String requestId;
 
@@ -29,7 +22,7 @@ public final class BuilderResponseSuccess {
 
 	private Map<String, Object> response = new LinkedHashMap<String, Object>();
 
-	public BuilderResponseSuccess addRequestId(RequestTO requestTO) {
+	public BuilderResponseSuccess addRequestId(RequestAvmTO requestTO) {
 		this.requestId = requestTO.getRequestId();
 		return this;
 	}
@@ -64,7 +57,7 @@ public final class BuilderResponseSuccess {
 		return this;
 	}
 
-	public BuilderResponseSuccess addEventName(RequestTO requestTO) {
+	public BuilderResponseSuccess addEventName(RequestAvmTO requestTO) {
 		this.response.put(SdkConstants.ResponseFields.Mandatory.EVENT_NAME, requestTO.getAction());
 		return this;
 	}
@@ -79,7 +72,7 @@ public final class BuilderResponseSuccess {
 		return this;
 	}
 
-	public ResponseTO build() throws SdkExceptions {
+	public ResponseAvmTO build() throws SdkExceptions {
 
 		if (this.response == null || this.response.size() <= 0) {
 			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE);
@@ -119,7 +112,7 @@ public final class BuilderResponseSuccess {
 			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_TYPE);
 		}
 
-		ResponseSuccessTO response = new ResponseSuccessTO(requestId);
+		ResponseSuccessAvmTO response = new ResponseSuccessAvmTO(requestId);
 		response.setResponse(this.response);
 		response.setStatus(status);
 		return response;

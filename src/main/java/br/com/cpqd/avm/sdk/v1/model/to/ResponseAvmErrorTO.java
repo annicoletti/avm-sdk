@@ -1,6 +1,6 @@
 package br.com.cpqd.avm.sdk.v1.model.to;
 
-public class ResponseErrorTO extends ResponseTO {
+public class ResponseAvmErrorTO extends ResponseAvmTO {
 
 	private static final long serialVersionUID = -4588269257222094048L;
 
@@ -8,7 +8,7 @@ public class ResponseErrorTO extends ResponseTO {
 
 	private String message;
 
-	public ResponseErrorTO(String requestId) {
+	public ResponseAvmErrorTO(String requestId) {
 		super.requestId = requestId;
 		super.status = false;
 	}

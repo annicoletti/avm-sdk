@@ -5,16 +5,27 @@ import java.util.ResourceBundle;
 
 public class SdkExceptions extends Exception {
 
-	Locale locale = new Locale.Builder().build();
-	ResourceBundle bundle = ResourceBundle.getBundle("exceptions", locale);
-	
 	private static final long serialVersionUID = -4938380884798482666L;
 
-	public SdkExceptions(String error) {
-		super(error);
-		String message = bundle.getString(error);
-		//message = MessageFormat.format(message, "André", "Nicoletti");
-		System.out.println(message);
+	private Locale locale = new Locale.Builder().build();
+
+	private ResourceBundle bundle = ResourceBundle.getBundle("exceptions", locale);
+
+	private String message;
+
+	private String code;
+
+	public SdkExceptions(String codeError) {
+		this.message = bundle.getString(codeError);
+		this.code = codeError;
 	}
-	
+
+	public String getCode() {
+		return code;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
 }

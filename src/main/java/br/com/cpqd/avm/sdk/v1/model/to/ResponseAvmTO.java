@@ -2,7 +2,7 @@ package br.com.cpqd.avm.sdk.v1.model.to;
 
 import java.io.Serializable;
 
-public class ResponseTO implements Serializable {
+public class ResponseAvmTO implements Serializable {
 
 	private static final long serialVersionUID = -2875047698537499968L;
 

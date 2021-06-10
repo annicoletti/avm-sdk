@@ -4,9 +4,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import br.com.cpqd.avm.sdk.v1.exception.SdkExceptions;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseErrorTO;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessTO;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseAvmErrorTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseAvmTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessAvmTO;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 
@@ -52,7 +52,7 @@ public final class BuilderResponse {
 		return this;
 	}
 
-	public ResponseTO build() throws SdkExceptions {
+	public ResponseAvmTO build() throws SdkExceptions {
 		if (status == null) {
 			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_REQUEST_ACTION);
 		}
@@ -60,7 +60,7 @@ public final class BuilderResponse {
 			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_REQUEST_ID);
 		}
 
-		ResponseTO response;
+		ResponseAvmTO response;
 		if (!status) {
 			if (code == null || code.trim().isEmpty()) {
 				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_CODE);
@@ -68,9 +68,9 @@ public final class BuilderResponse {
 			if (message == null || message.trim().isEmpty()) {
 				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_MESSAGE);
 			}
-			response = new ResponseErrorTO(requestId);
-			((ResponseErrorTO) response).setCode(code);
-			((ResponseErrorTO) response).setMessage(message);
+			response = new ResponseAvmErrorTO(requestId);
+			((ResponseAvmErrorTO) response).setCode(code);
+			((ResponseAvmErrorTO) response).setMessage(message);
 
 		} else {
 			if (!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.STATUS)) {
@@ -104,9 +104,9 @@ public final class BuilderResponse {
 				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_TYPE);
 			}
 
-			response = new ResponseSuccessTO(requestId);
-			((ResponseSuccessTO) response).setResponse(this.response);
-			((ResponseSuccessTO) response).setStatus(status);
+			response = new ResponseSuccessAvmTO(requestId);
+			((ResponseSuccessAvmTO) response).setResponse(this.response);
+			((ResponseSuccessAvmTO) response).setStatus(status);
 		}
 		return response;
 	}

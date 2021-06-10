@@ -14,10 +14,10 @@ import br.com.cpqd.avm.sdk.v1.model.to.Choices;
 import br.com.cpqd.avm.sdk.v1.model.to.Collect;
 import br.com.cpqd.avm.sdk.v1.model.to.Content;
 import br.com.cpqd.avm.sdk.v1.model.to.Menu;
-import br.com.cpqd.avm.sdk.v1.model.to.RequestTO;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseErrorTO;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessTO;
-import br.com.cpqd.avm.sdk.v1.model.to.ResponseTO;
+import br.com.cpqd.avm.sdk.v1.model.to.RequestAvmTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseAvmErrorTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessAvmTO;
+import br.com.cpqd.avm.sdk.v1.model.to.ResponseAvmTO;
 import br.com.cpqd.avm.sdk.v1.model.to.ShortText;
 import br.com.cpqd.avm.sdk.v1.model.to.Voice;
 import br.com.cpqd.avm.sdk.v1.service.api.Integration;
@@ -104,7 +104,7 @@ public class TesteDataModel implements Integration {
 	
 	@Test
 	public void requestTO() throws SdkExceptions {
-		RequestTO request = ResponseBuilder.REQUEST
+		RequestAvmTO request = ResponseBuilder.REQUEST
 				.addAction("action")
 				.addCompany("company")
 				.addPortfolio("portfolio")
@@ -112,23 +112,23 @@ public class TesteDataModel implements Integration {
 				.addToken("token")
 				.build();
 		
-		assertEquals(RequestTO.class, request.getClass());
+		assertEquals(RequestAvmTO.class, request.getClass());
 	}
 	
 	@Test
 	public void responseErrorTO() throws SdkExceptions {
-		ResponseTO response = ResponseBuilder.RESPONSE_ERROR
+		ResponseAvmTO response = ResponseBuilder.RESPONSE_ERROR
 				.addCode("code")
 				.addMessage("message")
 				.addRequestId(UUID.randomUUID().toString())
 				.build();
 		
-		assertEquals(ResponseErrorTO.class, response.getClass());
+		assertEquals(ResponseAvmErrorTO.class, response.getClass());
 	}
 	
 	@Test
 	public void responseSuccessTO() throws SdkExceptions {
-		ResponseTO response = ResponseBuilder.RESPONSE_SUCCESS
+		ResponseAvmTO response = ResponseBuilder.RESPONSE_SUCCESS
 				.addRequestId(UUID.randomUUID().toString())
 				.addDataModel(null)
 				.addEventName("ACTION")
@@ -136,12 +136,12 @@ public class TesteDataModel implements Integration {
 				.addResponse(EnumResponseSuccess.STATUS, true)
 				.build();
 		
-		assertEquals(ResponseSuccessTO.class, response.getClass());
+		assertEquals(ResponseSuccessAvmTO.class, response.getClass());
 	}
 	
 	
 	public void responseMethodExecute() throws SdkExceptions {
-		RequestTO request = ResponseBuilder.REQUEST
+		RequestAvmTO request = ResponseBuilder.REQUEST
 				.addAction("action")
 				.addCompany("company")
 				.addPortfolio("portfolio")
@@ -149,14 +149,14 @@ public class TesteDataModel implements Integration {
 				.addToken("token")
 				.build();
 		
-		ResponseTO response = execute(request);
+		ResponseAvmTO response = execute(request);
 		
-		assertEquals(ResponseTO.class, response.getClass());
+		assertEquals(ResponseAvmTO.class, response.getClass());
 	}
 
 	@Override
-	public ResponseTO execute(RequestTO requestTO) throws SdkExceptions {		
-		ResponseTO to = ResponseBuilder.RESPONSE_ERROR
+	public ResponseAvmTO execute(RequestAvmTO requestTO) throws SdkExceptions {		
+		ResponseAvmTO to = ResponseBuilder.RESPONSE_ERROR
 			.addRequestId(requestTO)
 			.addMessage("message")
 			.build();			

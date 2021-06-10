@@ -86,10 +86,4 @@ public class Choices implements DataModel {
 		this.quick_reply = quick_reply;
 	}
 
-	@Override
-	public String toString() {
-		return "ChoicesTO [voice=" + voice + ", short_text=" + short_text + ", imageUrl=" + imageUrl + ", text=" + text
-				+ ", value=" + value + ", match=" + match + ", url=" + url + ", quick_reply=" + quick_reply + "]";
-	}
-
 }
