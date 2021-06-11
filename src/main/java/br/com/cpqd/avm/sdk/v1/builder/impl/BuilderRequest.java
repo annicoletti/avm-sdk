@@ -118,10 +118,10 @@ public final class BuilderRequest {
 
 	public RequestAvmTO build() throws SdkExceptions {
 		if (requestId == null || requestId.trim().isEmpty()) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_REQUEST_REQUEST_ID);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__REQUEST_AVM__REQUEST_ID);
 		}
 		if (action == null || action.trim().isEmpty()) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_REQUEST_ACTION);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__REQUEST_AVM__ACTION);
 		}
 		RequestAvmTO request = new RequestAvmTO();
 		request.setAction(action);

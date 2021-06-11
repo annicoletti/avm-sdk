@@ -27,15 +27,16 @@ public interface ExecuteAvmFacade {
 	 * @param integration
 	 * @param request
 	 * @return {@link ResponseAvmTO}
+	 * @throws SdkExceptions
 	 */
 	public default ResponseAvmTO process(Integration integration, Map<String, Object> request) {
-		ResponseAvmTO avmResponse = new ResponseAvmTO();
+		ResponseAvmTO avmResponse = null;
 		try {
 			RequestAvmTO avmRequest;
 			avmRequest = new BuilderRequest().parseFromMap(request).build();
 			avmResponse = integration.execute(avmRequest);
 		} catch (SdkExceptions e) {
-			e.printStackTrace();
+			System.err.printf("[%s] = %s\n", e.getCode(), e.getMessage());
 		}
 		return avmResponse;
 	}

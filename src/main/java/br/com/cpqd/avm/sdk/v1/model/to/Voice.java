@@ -32,9 +32,4 @@ public class Voice {
 		this.ssml = ssml;
 	}
 
-	@Override
-	public String toString() {
-		return "VoiceTO [text=" + text + ", audio=" + audio + ", ssml=" + ssml + "]";
-	}
-
 }

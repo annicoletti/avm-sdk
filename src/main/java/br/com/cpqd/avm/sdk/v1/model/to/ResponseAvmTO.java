@@ -26,9 +26,4 @@ public class ResponseAvmTO implements Serializable {
 		this.status = status;
 	}
 
-	@Override
-	public String toString() {
-		return "ResponseTO [requestId=" + requestId + ", status=" + status + "]";
-	}
-
 }

@@ -12,7 +12,7 @@ import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 public class BuilderDataModelMenu {
 
 	private Menu menu = new Menu();
-	
+
 	private List<Content> listContent;
 
 	public BuilderDataModelMenu addTitle(String title) {
@@ -48,7 +48,7 @@ public class BuilderDataModelMenu {
 
 	public Menu build() throws SdkExceptions {
 		if (listContent == null || listContent.isEmpty()) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_DATA_MODEL_MENU_CONTENT);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__DATA_MODEL_MENU__CONTENT);
 		}
 		menu.setContent(listContent);
 		return this.menu;

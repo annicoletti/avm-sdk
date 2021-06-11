@@ -37,16 +37,17 @@ public final class BuilderResponseError {
 	}
 
 	public ResponseAvmTO build() throws SdkExceptions {
+		
 		if (requestId == null || requestId.trim().isEmpty()) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_REQUEST_ID);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_FAILED_AVM__REQUEST_ID);
 		}
 
 		if (code == null || code.trim().isEmpty()) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_CODE);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_FAILED_AVM__CODE);
 		}
 
 		if (message == null || message.trim().isEmpty()) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_MESSAGE);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_FAILED_AVM__MESSAGE);
 		}
 
 		ResponseAvmErrorTO response = new ResponseAvmErrorTO(requestId);

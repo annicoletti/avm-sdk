@@ -12,9 +12,4 @@ public class ShortText {
 		this.text = text;
 	}
 
-	@Override
-	public String toString() {
-		return "ShortTextTO [text=" + text + "]";
-	}
-
 }

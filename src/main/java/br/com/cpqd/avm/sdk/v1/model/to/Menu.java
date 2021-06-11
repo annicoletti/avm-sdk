@@ -46,9 +46,4 @@ public class Menu implements DataModel {
 		this.info = info;
 	}
 
-	@Override
-	public String toString() {
-		return "MenuTO [content=" + content + ", imageUrl=" + imageUrl + ", title=" + title + ", info=" + info + "]";
-	}
-
 }

@@ -3,52 +3,51 @@ package br.com.cpqd.avm.sdk.v1.utils;
 public interface SdkConstants {
 
 	interface DataModel {
-
-		public static final String DATA_MODEL = "datamodel";
-		public static final String MENU = "MENU";
-		public static final String CONTENT = "CONTENT";
-		public static final String COLLECT = "COLLECT";
-		public static final String VOICE = "VOICE";
-		public static final String SHORT_TEXT = "SHORT_TEXT";
-		public static final String CHOICES = "CHOICES";
+		String DATA_MODEL = "datamodel";
+		String MENU = "MENU";
+		String CONTENT = "CONTENT";
+		String COLLECT = "COLLECT";
+		String VOICE = "VOICE";
+		String SHORT_TEXT = "SHORT_TEXT";
+		String CHOICES = "CHOICES";
 
 	}
 
 	interface Type {
-		public static final String SIMPLE_MESSAGE = "SIMPLE_MESSAGE";
-		public static final String COLLECT = "COLLECT";
-		public static final String CHOICES = "CHOICES";
-		public static final String MENU = "MENU";
-		public static final String TRANSFER = "TRANSFER";
-		public static final String FINALIZE_SERVICE = "FINALIZE_SERVICE";
-		public static final String IGNORE = "IGNORE";
-		public static final String UPLOAD = "UPLOAD";
+		String SIMPLE_MESSAGE = "SIMPLE_MESSAGE";
+		String COLLECT = "COLLECT";
+		String CHOICES = "CHOICES";
+		String MENU = "MENU";
+		String TRANSFER = "TRANSFER";
+		String FINALIZE_SERVICE = "FINALIZE_SERVICE";
+		String IGNORE = "IGNORE";
+		String UPLOAD = "UPLOAD";
 	}
 
 	interface RequestFields {
-		public static final String REQUEST_ID = "requestId";
-		public static final String COMPANY = "company";
-		public static final String PORTFOLIO = "portfolio";
-		public static final String TOKEN = "token";
-		public static final String ACTION = "action";
-		public static final String PARAMETERS = "params";
+		String REQUEST_ID = "requestId";
+		String COMPANY = "company";
+		String PORTFOLIO = "portfolio";
+		String TOKEN = "token";
+		String ACTION = "action";
+		String PARAMETERS = "params";
 	}
 
 	interface ResponseFields {
-		public static final String REQUEST_ID = "requestId";
-		public static final String ACTION = "action";
-		public static final String STATUS = "status";
-		public static final String RESPONSE = "response";
-		public static final String CODE = "code";
-		public static final String MESSAGE = "message";
+		String REQUEST_ID = "requestId";
+		String ACTION = "action";
+		String STATUS = "status";
+		String RESPONSE = "response";
+		String CODE = "code";
+		String MESSAGE = "message";
 
 		interface Mandatory {
-			public static final String DATA_MODEL = "dataModel";
-			public static final String EVENT_NAME = "eventName";
-			public static final String TYPE = "type";
-			public static final String STATUS = "status";
-			public static final String ERROR_CODE = "errorCode";
-			public static final String ERROR_MESSAGE = "errorMessage";
+			String DATA_MODEL = "dataModel";
+			String EVENT_NAME = "eventName";
+			String TYPE = "type";
+			String STATUS = "status";
+			String ERROR_CODE = "errorCode";
+			String ERROR_MESSAGE = "errorMessage";
 		}
 
 	}

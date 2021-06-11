@@ -46,7 +46,7 @@ public final class BuilderResponseSuccess {
 		this.response.put(EnumResponseSuccess.getValor(), value);
 		return this;
 	}
-	
+
 	public BuilderResponseSuccess addResponseWithError(EnumResponseError EnumResponseError, Object value) {
 		this.response.put(EnumResponseError.getValor(), value);
 		return this;
@@ -61,7 +61,7 @@ public final class BuilderResponseSuccess {
 		this.response.put(SdkConstants.ResponseFields.Mandatory.EVENT_NAME, requestTO.getAction());
 		return this;
 	}
-	
+
 	public BuilderResponseSuccess addEventName(String action) {
 		this.response.put(SdkConstants.ResponseFields.Mandatory.EVENT_NAME, action);
 		return this;
@@ -75,15 +75,15 @@ public final class BuilderResponseSuccess {
 	public ResponseAvmTO build() throws SdkExceptions {
 
 		if (this.response == null || this.response.size() <= 0) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__RESPONSE);
 		}
 
 		if (requestId == null || requestId.trim().isEmpty()) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_REQUEST_ID);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__REQUEST_ID);
 		}
 
 		if (!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.STATUS)) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_STATUS);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__STATUS);
 		}
 
 		if (this.response.containsKey(SdkConstants.ResponseFields.Mandatory.STATUS)) {
@@ -91,25 +91,29 @@ public final class BuilderResponseSuccess {
 			Boolean bool = (object instanceof Boolean) ? (Boolean) object : false;
 
 			if (bool.equals(false) && !this.response.containsKey(SdkConstants.ResponseFields.Mandatory.ERROR_CODE)) {
-				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_ERROR_CODE);
+				throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__ERROR_CODE);
+
 			} else if (bool.equals(true)
 					&& this.response.containsKey(SdkConstants.ResponseFields.Mandatory.ERROR_CODE)) {
-				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_ERROR_CODE_NOT_NECESSARY);
+				throw new SdkExceptions(
+						SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__ERROR_CODE__NOT_REQUIRED);
 			}
 			if (bool.equals(false) && !this.response.containsKey(SdkConstants.ResponseFields.Mandatory.ERROR_MESSAGE)) {
-				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_ERROR_MESSAGE);
+				throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__ERROR_MESSAGE);
+
 			} else if (bool.equals(true)
 					&& this.response.containsKey(SdkConstants.ResponseFields.Mandatory.ERROR_MESSAGE)) {
-				throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_ERROR_MESSAGE_NOT_NECESSARY);
+				throw new SdkExceptions(
+						SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__ERROR_MESSAGE__NOT_REQUIRED);
 			}
 		}
 
 		if (!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.EVENT_NAME)) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_EVENT_NAME);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__EVENT_NAME);
 		}
 
 		if (!this.response.containsKey(SdkConstants.ResponseFields.Mandatory.TYPE)) {
-			throw new SdkExceptions(SdkConstantsExceptions.EXCEPTION_RESPONSE_RESPONSE_TYPE);
+			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__RESPONSE_SUCCESS_AVM__TYPE);
 		}
 
 		ResponseSuccessAvmTO response = new ResponseSuccessAvmTO(requestId);

@@ -86,10 +86,4 @@ public class Collect implements DataModel {
 		this.quick_reply = quick_reply;
 	}
 
-	@Override
-	public String toString() {
-		return "CollectTO [voice=" + voice + ", short_text=" + short_text + ", imageUrl=" + imageUrl + ", text=" + text
-				+ ", value=" + value + ", match=" + match + ", url=" + url + ", quick_reply=" + quick_reply + "]";
-	}
-
 }

@@ -32,9 +32,4 @@ public class Content {
 		this.match = match;
 	}
 
-	@Override
-	public String toString() {
-		return "ContentTO [text=" + text + ", value=" + value + ", match=" + match + "]";
-	}
-
 }

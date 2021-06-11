@@ -67,10 +67,4 @@ public class RequestAvmTO implements Serializable {
 		this.params = params;
 	}
 
-	@Override
-	public String toString() {
-		return "Request [requestId=" + requestId + ", company=" + company + ", portfolio=" + portfolio + ", token="
-				+ token + ", action=" + action + "]";
-	}
-
 }
