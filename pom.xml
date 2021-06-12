@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.cpqd.avm</groupId>
 	<artifactId>sdk</artifactId>
-	<version>0.0.9</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	<name>avmsdk</name>
 	<description>SDK para Assistente Virtual Multicanal - CPqD</description>
@@ -28,29 +28,18 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
-	<!-- My Maven Repository -->
 	<distributionManagement>
 		<repository>
-			<id>myMavenRepoWrite</id>
-			<url>${myMavenRepoWriteUrl}</url>
+			<id>central</id>
+			<name>a0mbdxxtg4ccc-artifactory-primary-0-releases</name>
+			<url>https://nicoletti.jfrog.io/artifactory/default-maven-virtual</url>
 		</repository>
 		<snapshotRepository>
-			<id>myMavenRepoWrite</id>
-			<url>${myMavenRepoWriteUrl}</url>
+			<id>snapshots</id>
+			<name>a0mbdxxtg4ccc-artifactory-primary-0-snapshots</name>
+			<url>https://nicoletti.jfrog.io/artifactory/default-maven-virtual</url>
 		</snapshotRepository>
 	</distributionManagement>
-
-	<!-- Central Maven Repository -->
-	<!-- <distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement> -->
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.json/json -->
