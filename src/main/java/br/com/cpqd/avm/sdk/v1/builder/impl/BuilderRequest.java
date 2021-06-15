@@ -10,6 +10,7 @@ import br.com.cpqd.avm.sdk.v1.model.to.RequestAvmTO;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 
+@Deprecated
 public final class BuilderRequest {
 
 	private String requestId;
@@ -24,31 +25,37 @@ public final class BuilderRequest {
 
 	private HashMap<String, Object> params;
 
+	@Deprecated
 	public BuilderRequest addRequestId(String requestId) {
 		this.requestId = requestId;
 		return this;
 	}
 
+	@Deprecated
 	public BuilderRequest addCompany(String company) {
 		this.company = company;
 		return this;
 	}
 
+	@Deprecated
 	public BuilderRequest addPortfolio(String portfolio) {
 		this.portfolio = portfolio;
 		return this;
 	}
 
+	@Deprecated
 	public BuilderRequest addToken(String token) {
 		this.token = token;
 		return this;
 	}
 
+	@Deprecated
 	public BuilderRequest addAction(String action) {
 		this.action = action;
 		return this;
 	}
 
+	@Deprecated
 	public BuilderRequest addParam(Map<String, Object> params) {
 		if (this.params == null) {
 			this.params = new HashMap<String, Object>();
@@ -57,6 +64,7 @@ public final class BuilderRequest {
 		return this;
 	}
 
+	@Deprecated
 	public BuilderRequest addParam(String key, String value) {
 		if (this.params == null) {
 			this.params = new HashMap<String, Object>();
@@ -65,6 +73,7 @@ public final class BuilderRequest {
 		return this;
 	}
 
+	@Deprecated
 	public BuilderRequest parseFromJSON(JSONObject json) {
 		if (json.has(SdkConstants.RequestFields.ACTION)) {
 			action = json.getString(SdkConstants.RequestFields.ACTION);
@@ -106,16 +115,19 @@ public final class BuilderRequest {
 		return this;
 	}
 
+	@Deprecated
 	public BuilderRequest parseFromJSON(String json) {
 		JSONObject jsonObject = new JSONObject(json);
 		return this.parseFromJSON(jsonObject);
 	}
 
+	@Deprecated
 	public BuilderRequest parseFromMap(Map<String, Object> map) {
 		JSONObject json = new JSONObject(map);
 		return this.parseFromJSON(json);
 	}
 
+	@Deprecated
 	public RequestAvmTO build() throws SdkExceptions {
 		if (requestId == null || requestId.trim().isEmpty()) {
 			throw new SdkExceptions(SdkConstantsExceptions.Builder.EXCEPTION__REQUEST_AVM__REQUEST_ID);

@@ -1,13 +1,12 @@
-package br.com.cpqd.avm.sdk.v1.enums;
+package br.com.cpqd.avm.sdk.v2.enums;
 
-@Deprecated
-public enum EnumResponseSuccess {
+public enum AvmResponseSuccess {
 
 	STATUS("status"), TYPE("type"), DATA_MODEL("datamodel");
 
 	private String valor;
 
-	EnumResponseSuccess(String valor) {
+	AvmResponseSuccess(String valor) {
 		this.valor = valor;
 	}
 

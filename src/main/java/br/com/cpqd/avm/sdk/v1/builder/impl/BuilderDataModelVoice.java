@@ -2,6 +2,7 @@ package br.com.cpqd.avm.sdk.v1.builder.impl;
 
 import br.com.cpqd.avm.sdk.v1.model.to.Voice;
 
+@Deprecated
 public class BuilderDataModelVoice {
 
 	private Voice voiceTO = new Voice();

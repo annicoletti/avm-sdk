@@ -7,6 +7,7 @@ import br.com.cpqd.avm.sdk.v1.model.to.Choices;
 import br.com.cpqd.avm.sdk.v1.model.to.ShortText;
 import br.com.cpqd.avm.sdk.v1.model.to.Voice;
 
+@Deprecated
 public class BuilderDataModelChoices {
 
 	private Choices choicesTO = new Choices();

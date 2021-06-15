@@ -3,6 +3,7 @@ package br.com.cpqd.avm.sdk.v1.model.to;
 import java.io.Serializable;
 import java.util.Map;
 
+@Deprecated
 public class RequestAvmTO implements Serializable {
 
 	private static final long serialVersionUID = 5791849205603413511L;

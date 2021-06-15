@@ -1,13 +1,12 @@
-package br.com.cpqd.avm.sdk.v1.enums;
+package br.com.cpqd.avm.sdk.v2.enums;
 
-@Deprecated
-public enum EnumResponseError {
+public enum AvmResponseError {
 
 	STATUS("status"), ERROR_MESSAGE("errorMessage"), ERROR_CODE("errorCode");
 
 	private String valor;
 
-	EnumResponseError(String valor) {
+	AvmResponseError(String valor) {
 		this.valor = valor;
 	}
 

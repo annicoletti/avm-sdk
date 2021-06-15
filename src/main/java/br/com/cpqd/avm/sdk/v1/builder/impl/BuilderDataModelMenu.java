@@ -9,6 +9,7 @@ import br.com.cpqd.avm.sdk.v1.model.to.Content;
 import br.com.cpqd.avm.sdk.v1.model.to.Menu;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 
+@Deprecated
 public class BuilderDataModelMenu {
 
 	private Menu menu = new Menu();

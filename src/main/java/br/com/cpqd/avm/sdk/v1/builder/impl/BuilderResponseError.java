@@ -6,6 +6,7 @@ import br.com.cpqd.avm.sdk.v1.model.to.ResponseAvmErrorTO;
 import br.com.cpqd.avm.sdk.v1.model.to.ResponseAvmTO;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 
+@Deprecated
 public final class BuilderResponseError {
 
 	private String requestId;

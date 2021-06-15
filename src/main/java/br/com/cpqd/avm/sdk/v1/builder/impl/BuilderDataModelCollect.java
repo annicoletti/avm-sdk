@@ -7,6 +7,7 @@ import br.com.cpqd.avm.sdk.v1.model.to.Collect;
 import br.com.cpqd.avm.sdk.v1.model.to.ShortText;
 import br.com.cpqd.avm.sdk.v1.model.to.Voice;
 
+@Deprecated
 public class BuilderDataModelCollect {
 
 	private Collect collectTO = new Collect();

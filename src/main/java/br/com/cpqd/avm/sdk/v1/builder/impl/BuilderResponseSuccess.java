@@ -14,6 +14,7 @@ import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessAvmTO;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 
+@Deprecated
 public final class BuilderResponseSuccess {
 
 	private String requestId;
@@ -22,21 +23,25 @@ public final class BuilderResponseSuccess {
 
 	private Map<String, Object> response = new LinkedHashMap<String, Object>();
 
+	@Deprecated
 	public BuilderResponseSuccess addRequestId(RequestAvmTO requestTO) {
 		this.requestId = requestTO.getRequestId();
 		return this;
 	}
 
+	@Deprecated
 	public BuilderResponseSuccess addRequestId(String requestId) {
 		this.requestId = requestId;
 		return this;
 	}
 
+	@Deprecated
 	public BuilderResponseSuccess addResponse(Map<String, Object> response) {
 		this.response.putAll(response);
 		return this;
 	}
 
+	@Deprecated
 	public BuilderResponseSuccess addResponse(String key, Object value) {
 		this.response.put(key, value);
 		return this;
@@ -52,26 +57,31 @@ public final class BuilderResponseSuccess {
 		return this;
 	}
 
+	@Deprecated
 	public BuilderResponseSuccess addType(EnumType EnumType) {
 		this.response.put(SdkConstants.ResponseFields.Mandatory.TYPE, EnumType);
 		return this;
 	}
 
+	@Deprecated
 	public BuilderResponseSuccess addEventName(RequestAvmTO requestTO) {
 		this.response.put(SdkConstants.ResponseFields.Mandatory.EVENT_NAME, requestTO.getAction());
 		return this;
 	}
 
+	@Deprecated
 	public BuilderResponseSuccess addEventName(String action) {
 		this.response.put(SdkConstants.ResponseFields.Mandatory.EVENT_NAME, action);
 		return this;
 	}
 
+	@Deprecated
 	public BuilderResponseSuccess addDataModel(DataModel datamodel) {
 		this.response.put(SdkConstants.ResponseFields.Mandatory.DATA_MODEL, datamodel);
 		return this;
 	}
 
+	@Deprecated
 	public ResponseAvmTO build() throws SdkExceptions {
 
 		if (this.response == null || this.response.size() <= 0) {

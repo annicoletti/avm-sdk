@@ -1,5 +1,6 @@
 package br.com.cpqd.avm.sdk.v1.builder.impl;
 
+@Deprecated
 public final class ResponseBuilder {
 
 	public static final BuilderRequest REQUEST = new BuilderRequest();

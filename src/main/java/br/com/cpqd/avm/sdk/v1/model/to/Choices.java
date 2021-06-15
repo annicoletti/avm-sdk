@@ -4,6 +4,7 @@ import java.util.List;
 
 import br.com.cpqd.avm.sdk.v1.builder.api.DataModel;
 
+@Deprecated
 public class Choices implements DataModel {
 
 	private List<Voice> voice;

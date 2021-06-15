@@ -1,5 +1,6 @@
 package br.com.cpqd.avm.sdk.v1.model.to;
 
+@Deprecated
 public class Voice {
 
 	private String text;

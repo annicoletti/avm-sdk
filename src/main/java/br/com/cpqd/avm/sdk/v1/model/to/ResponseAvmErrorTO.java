@@ -1,5 +1,6 @@
 package br.com.cpqd.avm.sdk.v1.model.to;
 
+@Deprecated
 public class ResponseAvmErrorTO extends ResponseAvmTO {
 
 	private static final long serialVersionUID = -4588269257222094048L;

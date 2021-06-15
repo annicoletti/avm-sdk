@@ -2,6 +2,7 @@ package br.com.cpqd.avm.sdk.v1.builder.impl;
 
 import br.com.cpqd.avm.sdk.v1.model.to.Content;
 
+@Deprecated
 public class BuilderDataModelContent {
 
 	private Content contentTO = new Content();

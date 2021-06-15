@@ -10,6 +10,7 @@ import br.com.cpqd.avm.sdk.v1.model.to.ResponseSuccessAvmTO;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 
+@Deprecated
 public final class BuilderResponse {
 
 	private String requestId;
