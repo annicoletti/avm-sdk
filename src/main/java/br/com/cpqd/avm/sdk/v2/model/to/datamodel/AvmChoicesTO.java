@@ -6,7 +6,7 @@ import java.util.List;
 import br.com.cpqd.avm.sdk.v2.builder.api.AvmDataModel;
 import br.com.cpqd.avm.sdk.v2.enums.AvmDataModelType;
 
-public class AvmChoicesTO extends AvmDataModel {
+public class AvmChoicesTO implements AvmDataModel {
 
 	private List<AvmItensChoicesTO> choices;
 
@@ -40,6 +40,11 @@ public class AvmChoicesTO extends AvmDataModel {
 	@Override
 	public AvmDataModelType getType() {
 		return AvmDataModelType.CHOICES;
+	}
+
+	@Override
+	public Object getDataModel() {
+		return choices;
 	}
 
 }

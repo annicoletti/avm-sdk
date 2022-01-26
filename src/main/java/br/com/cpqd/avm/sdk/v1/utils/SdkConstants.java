@@ -40,6 +40,8 @@ public interface SdkConstants {
 		String RESPONSE = "response";
 		String CODE = "code";
 		String MESSAGE = "message";
+		
+		String RESPONSE_TEMPLATE = "responseTemplate";
 
 		interface Mandatory {
 			String DATA_MODEL = "dataModel";

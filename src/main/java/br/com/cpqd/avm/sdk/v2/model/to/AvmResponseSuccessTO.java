@@ -3,6 +3,10 @@ package br.com.cpqd.avm.sdk.v2.model.to;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import br.com.cpqd.avm.sdk.v1.exception.SdkExceptions;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
@@ -31,6 +35,8 @@ public class AvmResponseSuccessTO extends AvmResponseTO {
 
 	public static class Builder implements AvmValidateBean {
 
+		private static final Logger LOGGER = LoggerFactory.getLogger(Builder.class);
+
 		private String requestId;
 
 		private Map<String, Object> response = new LinkedHashMap<>();
@@ -52,7 +58,7 @@ public class AvmResponseSuccessTO extends AvmResponseTO {
 		}
 
 		public Builder addDataModel(AvmDataModel datamodel) {
-			this.response.put(SdkConstants.ResponseFields.Mandatory.DATA_MODEL, datamodel);
+			this.response.put(SdkConstants.ResponseFields.Mandatory.DATA_MODEL, datamodel.getDataModel());
 			this.response.put(SdkConstants.ResponseFields.Mandatory.TYPE, datamodel.getType());
 			return this;
 		}
@@ -74,9 +80,16 @@ public class AvmResponseSuccessTO extends AvmResponseTO {
 			return this;
 		}
 
+		public Builder addResponseTextTemplate(AvmResponseTemplate template) {
+			this.response.put("avm_template", template.getResponses());
+			return this;
+		}
+
 		public AvmResponseSuccessTO build() throws SdkExceptions {
 			validate();
-			return new AvmResponseSuccessTO(requestId, response);
+			AvmResponseSuccessTO avmResponseSuccessTO = new AvmResponseSuccessTO(requestId, response);
+			LOGGER.info("[AVM RESPONSE] - {}", new JSONObject(avmResponseSuccessTO).toString(4));
+			return avmResponseSuccessTO;
 		}
 
 		@Override

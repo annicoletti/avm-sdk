@@ -4,6 +4,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import br.com.cpqd.avm.sdk.v1.exception.SdkExceptions;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstants;
@@ -59,6 +61,8 @@ public class AvmRequestTO {
 	}
 
 	public static class Builder implements AvmValidateBean {
+		
+		private static final Logger LOGGER = LoggerFactory.getLogger(Builder.class);
 
 		private String requestId;
 
@@ -109,7 +113,9 @@ public class AvmRequestTO {
 
 		public AvmRequestTO build() throws SdkExceptions {
 			validate();
-			return new AvmRequestTO(requestId, company, portfolio, token, action, params);
+			AvmRequestTO avmRequestTO = new AvmRequestTO(requestId, company, portfolio, token, action, params);
+			LOGGER.info("[AVM REQUEST] - {}", new JSONObject(avmRequestTO).toString(4));
+			return avmRequestTO;
 		}
 
 		@SuppressWarnings("unchecked")

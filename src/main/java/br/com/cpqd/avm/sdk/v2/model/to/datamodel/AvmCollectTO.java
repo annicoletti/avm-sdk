@@ -6,7 +6,7 @@ import java.util.List;
 import br.com.cpqd.avm.sdk.v2.builder.api.AvmDataModel;
 import br.com.cpqd.avm.sdk.v2.enums.AvmDataModelType;
 
-public class AvmCollectTO extends AvmDataModel {
+public class AvmCollectTO implements AvmDataModel {
 
 	private List<AvmVoiceTO> voice;
 
@@ -139,6 +139,11 @@ public class AvmCollectTO extends AvmDataModel {
 	@Override
 	public AvmDataModelType getType() {
 		return AvmDataModelType.COLLECT;
+	}
+
+	@Override
+	public Object getDataModel() {
+		return this;
 	}
 
 }

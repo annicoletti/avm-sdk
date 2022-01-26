@@ -1,5 +1,9 @@
 package br.com.cpqd.avm.sdk.v2.model.to;
 
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import br.com.cpqd.avm.sdk.v1.exception.SdkExceptions;
 import br.com.cpqd.avm.sdk.v1.utils.SdkConstantsExceptions;
 import br.com.cpqd.avm.sdk.v2.builder.api.AvmValidateBean;
@@ -33,6 +37,8 @@ public class AvmResponseErrorTO extends AvmResponseTO {
 	}
 
 	public static class Builder implements AvmValidateBean {
+		
+		private static final Logger LOGGER = LoggerFactory.getLogger(Builder.class);
 
 		private String code;
 
@@ -57,7 +63,9 @@ public class AvmResponseErrorTO extends AvmResponseTO {
 
 		public AvmResponseErrorTO build() throws SdkExceptions {
 			validate();
-			return new AvmResponseErrorTO(requestId, code, message);
+			AvmResponseErrorTO avmResponseErrorTO = new AvmResponseErrorTO(requestId, code, message);
+			LOGGER.info("[AVM RESPONSE] - {}", new JSONObject(avmResponseErrorTO).toString(4));
+			return avmResponseErrorTO;
 		}
 
 		@Override

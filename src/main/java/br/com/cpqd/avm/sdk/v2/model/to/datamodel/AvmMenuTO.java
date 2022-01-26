@@ -6,7 +6,7 @@ import java.util.List;
 import br.com.cpqd.avm.sdk.v2.builder.api.AvmDataModel;
 import br.com.cpqd.avm.sdk.v2.enums.AvmDataModelType;
 
-public class AvmMenuTO extends AvmDataModel {
+public class AvmMenuTO implements AvmDataModel {
 
 	private List<AvmItensMenuTO> menu;
 
@@ -16,6 +16,14 @@ public class AvmMenuTO extends AvmDataModel {
 
 	public List<AvmItensMenuTO> getMenu() {
 		return menu;
+	}
+
+	public void addItensMenu(List<AvmItensMenuTO> itensMenu) {
+		this.menu.addAll(itensMenu);
+	}
+
+	public void addItensMenu(AvmItensMenuTO itensMenu) {
+		this.menu.add(itensMenu);
 	}
 
 	public static class Builder {
@@ -36,6 +44,11 @@ public class AvmMenuTO extends AvmDataModel {
 	@Override
 	public AvmDataModelType getType() {
 		return AvmDataModelType.MENU;
+	}
+
+	@Override
+	public Object getDataModel() {
+		return menu;
 	}
 
 }
